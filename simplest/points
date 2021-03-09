@@ -1,0 +1,102 @@
+
+
+place=city & population > 999999 & name=* [0x0100 resolution 12]
+place=city & population > 799999 & name=* [0x0200 resolution 14]
+place=city & population > 399999 & name=* [0x0300 resolution 15]
+place=city & population > 299999 & name=* [0x0400 resolution 16]
+place=city & population > 199999 & name=* [0x0500 resolution 16]
+place=city & population >  99999 & name=* [0x0600 resolution 17]
+place=city & population >  49999 & name=* [0x0700 resolution 17]
+place=city & population >   9999 & name=* [0x0800 resolution 18]
+
+place=city & population >      0 & name=* [0x0800 resolution 18]
+place=city                       & name=* [0x0700 resolution 18]
+
+place=town & population >  69999 & name=* [0x0600 resolution 17]
+place=town & population >  19999 & name=* [0x0700 resolution 18]
+place=town & population >   9999 & name=* [0x0800 resolution 19]
+place=town & population >   4999 & name=* [0x0900 resolution 19]
+place=town & population >    999 & name=* [0x0a00 resolution 19]
+place=town & population >      0 & name=* [0x0b00 resolution 20]
+place=town                       & name=* [0x0800 resolution 19]
+
+place=village                    & name=* [0x0900 resolution 22]
+place=suburb                     & name=* [0x0a00 resolution 22]
+place=hamlet                     & name=* [0x0b00 resolution 22]
+
+place=island & name=* [0x650c resolution 20]
+place=islet  & name=* [0x650c resolution 22]
+
+#aeroway=airport [0x5900 resolution 22]
+#aeroway=airport [0x2f04 resolution 22]
+#aeroway=aerodrome [0x2f04 resolution 22]
+#aeroway=helipad [0x5904 resolution 23]
+#aeroway=terminal [0x2f04 resolution 24]
+
+#amenity=atm [0x2f06 resolution 24 continue]
+
+#amenity=border_control | barrier=border_control [0x3006 resolution 20]
+#amenity=bus_station [0x2f08 resolution 22]
+
+amenity=drinking_water [0x5000 resolution 22 default_name 'Water']
+
+#amenity=emergency_phone [0x2f12 resolution 22 default_name 'Emergency Phone']
+#amenity=ferry_terminal [0x2f08 resolution 22]
+
+#amenity=shelter & shelter_type=basic_hut [0x2b06 resolution 22 default_name 'Shelter']
+
+#amenity=supermarket [0x2e02 resolution 22]
+
+#healthcare=hospital | amenity=hospital | amenity=clinic [0x3002 resolution 22]
+#healthcare=* | amenity=doctors [0x3002 resolution 22]
+
+
+#leisure=nature_reserve [0x6612 resolution 24]
+#leisure=park [0x2c06 resolution 24]
+
+#railway=station [0x2f08 resolution 22]
+#railway=halt [0x2f08 resolution 22]
+# if option --add-pois-to-lines in effect, add just 1 POI
+#(railway=platform | (public_transport=platform & railway=*)) & (mkgmap:line2poi!=true | mkgmap:line2poitype=mid) [0x2f08 resolution 23]
+#public_transport=platform & (mkgmap:line2poi!=true | mkgmap:line2poitype=mid) [0x2f17 resolution 22]
+#highway=bus_stop | railway=tram_stop [0x2f17 resolution 22]
+
+
+
+#tourism=alpine_hut [0x2b02 resolution 24]
+
+#tourism=bed_and_breakfast [0x2b02 resolution 24]
+# NB: different devices use different codes for camp/caravan_site, have both!
+tourism=camp_site [0x2b03 resolution 22] [0x2b05 resolution 20]
+#tourism=caravan_site [0x2b03 resolution 24] [0x2b05 resolution 24]
+#tourism=chalet [0x2b02 resolution 24]
+#tourism=guest_house [0x2b02 resolution 24]
+#tourism=hostel [0x2b02 resolution 24]
+# Have both hotel &| restaurant POIs
+#tourism=hotel | tourism=motel {set tmp:stopMopUp=yes} [0x2b01 resolution 24 continue with_actions]
+#tourism=information [0x4c00 resolution 24]
+# tourism=lean_to replaces some uses of amenity=shelter
+#tourism=lean_to [0x2b05 resolution 24 default_name 'lean-to']
+tourism=wilderness_hut [0x2b07 resolution 22 default_name 'wilderness hut']
+
+#tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x2c04 resolution 24]
+
+
+
+
+
+natural=beach [0x6604 resolution 22]
+natural=glacier [0x650a resolution 22]
+natural=spring [0x6511 resolution 22]
+natural=stream [0x6512 resolution 22]
+natural=water & (water=canal | water=lock) & name=* [0x6505 resolution 22]
+(water=lake | water=pond) & name=* [0x650d resolution 22]
+natural=water & name=* [0x6603 resolution 22]
+natural=waterfall | waterway=waterfall [0x6508 resolution 22]
+natural=wetland & name=* [0x6513 resolution 22]
+
+
+<finalize>
+# The finalizer section is executed for each element when a rule with an element type matches
+
+name=* {name '${name}'}
