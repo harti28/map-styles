@@ -14,5 +14,5 @@ version=1.0
 
 # A longer description of the style.
 description {
-Style for Garmin etrex 10, only necessary info (no names, only poi of special interest)
+Style for Garmin etrex 10, only roads and rivers, no names
 }

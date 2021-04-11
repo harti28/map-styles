@@ -63,94 +63,94 @@ man_made=pier | man_made=piste:halfpipe {add highway=footway}
 man_made=breakwater & is_closed()=false & mkgmap:mp_created!=true [0x17 resolution 22]
 
 # Roundabouts
-junction=roundabout & (highway=trunk | highway=trunk_link) [0x0c road_class=4 road_speed=2 resolution 22 continue]
+junction=roundabout & (highway=trunk | highway=trunk_link) [0x0c resolution 22 continue]
 junction=roundabout & (highway=trunk | highway=trunk_link) [0x10801 resolution 18]
 
-junction=roundabout & (highway=primary | highway=primary_link) & mkgmap:fast_road=yes [0x0c road_class=4 road_speed=2 resolution 22 continue]
+junction=roundabout & (highway=primary | highway=primary_link) & mkgmap:fast_road=yes [0x0c resolution 22 continue]
 junction=roundabout & (highway=primary | highway=primary_link) & mkgmap:fast_road=yes [0x10802 resolution 19]
 
-junction=roundabout & (highway=primary | highway=primary_link) [0x0c road_class=3 road_speed=2 resolution 22 continue]
+junction=roundabout & (highway=primary | highway=primary_link) [0x0c resolution 22 continue]
 junction=roundabout & (highway=primary | highway=primary_link) [0x10802 resolution 19]
 
-junction=roundabout & (highway=secondary | highway=secondary_link) & mkgmap:fast_road=yes [0x0c road_class=3 road_speed=2 resolution 22 continue]
+junction=roundabout & (highway=secondary | highway=secondary_link) & mkgmap:fast_road=yes [0x0c resolution 22 continue]
 junction=roundabout & (highway=secondary | highway=secondary_link) & mkgmap:fast_road=yes [0x10803 resolution 20]
 
-junction=roundabout & (highway=secondary | highway=secondary_link) [0x0c road_class=2 road_speed=2 resolution 22 continue]
+junction=roundabout & (highway=secondary | highway=secondary_link) [0x0c resolution 22 continue]
 junction=roundabout & (highway=secondary | highway=secondary_link) [0x10803 resolution 20]
 
-junction=roundabout & (highway=tertiary | highway=tertiary_link) [0x0c road_class=1 road_speed=1 resolution 22 continue]
+junction=roundabout & (highway=tertiary | highway=tertiary_link) [0x0c resolution 22 continue]
 junction=roundabout & (highway=tertiary | highway=tertiary_link) [0x10804 resolution 21]
 
-junction=roundabout & (highway=unclassified | highway=minor) [0x0c road_class=1 road_speed=1 resolution 21]
-junction=roundabout & highway=* [0x0c road_class=0 road_speed=1 resolution 22]
+junction=roundabout & (highway=unclassified | highway=minor) [0x0c resolution 21]
+junction=roundabout & highway=* [0x0c resolution 22]
 
 # Ways that may or may not be useable
 
 # Treat ways under construction almost as highway=path, see also extra rule in inc/access
-highway=construction {add mkgmap:dead-end-check=false} [0x16 road_class=0 road_speed=0 resolution 22]
+highway=construction {add mkgmap:dead-end-check=false} [0x16 resolution 22]
 
 
 # Ways sorted roughly by descending order of class
-highway=motorway & mkgmap:fast_road=yes [0x01 road_class=4 road_speed=7 resolution 14]
-highway=motorway [0x01 road_class=4 road_speed=7 resolution 15]
-highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) [0x0b road_class=4 road_speed=2 resolution 20]
-highway=motorway_link [0x09 road_class=4 road_speed=2 resolution 20]
+highway=motorway & mkgmap:fast_road=yes [0x01 resolution 14]
+highway=motorway [0x01 resolution 15]
+highway=motorway_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) [0x0b resolution 20]
+highway=motorway_link [0x09 resolution 20]
 
-highway=trunk & mkgmap:fast_road=yes [0x02 road_class=4 road_speed=5 resolution 15]
-highway=trunk [0x02 road_class=4 road_speed=5 resolution 18]
-highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) [0x0b road_class=4 road_speed=2 resolution 20]
-highway=trunk_link [0x09 road_class=4 road_speed=2 resolution 20]
-highway=* & motorroad=yes [0x02 road_class=4 road_speed=4 resolution 18]
-highway=primary & mkgmap:fast_road=yes [0x03 road_class=4 road_speed=4 resolution 17]
-highway=primary [0x03 road_class=3 road_speed=4 resolution 19]
-highway=primary_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) & mkgmap:fast_road=yes [0x0b road_class=4 road_speed=1 resolution 21]
-highway=primary_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) [0x0b road_class=3 road_speed=1 resolution 21]
-highway=primary_link & mkgmap:fast_road=yes [0x08 road_class=4 road_speed=1 resolution 21]
-highway=primary_link [0x08 road_class=3 road_speed=1 resolution 21]
-highway=secondary & mkgmap:fast_road=yes [0x04 road_class=3 road_speed=3 resolution 18]
-highway=secondary [0x04 road_class=2 road_speed=3 resolution 20]
-highway=secondary_link & mkgmap:fast_road=yes [0x08 road_class=3 road_speed=1 resolution 22]
-highway=secondary_link [0x08 road_class=2 road_speed=1 resolution 22]
-highway=tertiary [0x05 road_class=1 road_speed=3 resolution 20]
-highway=tertiary_link [0x08 road_class=1 road_speed=1 resolution 22]
-highway=minor [0x06 road_class=1 road_speed=3 resolution 21]
-highway=unclassified [0x06 road_class=0 road_speed=3 resolution 21]
+highway=trunk & mkgmap:fast_road=yes [0x02 resolution 15]
+highway=trunk [0x02 resolution 18]
+highway=trunk_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) [0x0b resolution 20]
+highway=trunk_link [0x09 resolution 20]
+highway=* & motorroad=yes [0x02 resolution 18]
+highway=primary & mkgmap:fast_road=yes [0x03 resolution 17]
+highway=primary [0x03 resolution 19]
+highway=primary_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) & mkgmap:fast_road=yes [0x0b resolution 21]
+highway=primary_link & (mkgmap:exit_hint=true | mkgmap:dest_hint=*) [0x0b resolution 21]
+highway=primary_link & mkgmap:fast_road=yes [0x08 resolution 21]
+highway=primary_link [0x08 resolution 21]
+highway=secondary & mkgmap:fast_road=yes [0x04 resolution 18]
+highway=secondary [0x04 resolution 20]
+highway=secondary_link & mkgmap:fast_road=yes [0x08 resolution 22]
+highway=secondary_link [0x08 resolution 22]
+highway=tertiary [0x05 resolution 20]
+highway=tertiary_link [0x08 resolution 22]
+highway=minor [0x06 resolution 21]
+highway=unclassified [0x06 resolution 21]
 
 highway=yes {set highway=footway}  # fix common bad tagging - little bits of path to join other routable ways
 
 # Some countries allow, others disallow bicycling on pedestrian streets. See inc/access_country
 
 # highway=pedestrian could be closed polygon to represent a 'square', add route regardless and continue for polygon processing
-highway=pedestrian {set tmp:stopMopUp=yes} [0x16 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=pedestrian {set tmp:stopMopUp=yes} [0x16 resolution 22 continue with_actions]
 
-highway=living_street [0x06 road_class=0 road_speed=1 resolution 22]
-highway=residential [0x06 road_class=0 road_speed=2 resolution 22]
-highway=bridleway [0x07 road_class=0 road_speed=0 resolution 22]
-highway=byway [0x16 road_class=0 road_speed=0 resolution 22]
+highway=living_street [0x06 resolution 22]
+highway=residential [0x06 resolution 22]
+highway=bridleway [0x07 resolution 22]
+highway=byway [0x16 resolution 22]
 
 highway=driveway {set highway=service; add service=driveway}  # fix common bad tagging
 highway=access  {set highway=service}  # fix common bad tagging
 highway=access_ramp {set highway=footway}  # proposed
 
-highway=service & service=parking_aisle [0x07 road_class=0 road_speed=1 resolution 22]
-highway=service & (service=alley | service=driveway) [0x07 road_class=0 road_speed=0 resolution 22]
-highway=service [0x07 road_class=0 road_speed=2 resolution 22]
+highway=service & service=parking_aisle [0x07 resolution 22]
+highway=service & (service=alley | service=driveway) [0x07 resolution 22]
+highway=service [0x07 resolution 22]
 
-highway=cycleway [0x11 road_class=0 road_speed=1 resolution 22]
+highway=cycleway [0x11 resolution 22]
 
 # highway=footway is often an area as well, continue for polygon processing
-highway=footway {set tmp:stopMopUp=yes} [0x16 road_class=0 road_speed=0 resolution 22 continue with_actions]
+highway=footway {set tmp:stopMopUp=yes} [0x16 resolution 22 continue with_actions]
 
 highway=trail {set highway=path; add bicycle=no}  # fix common bad tagging
 
-highway=path [0x16 road_class=0 road_speed=0 resolution 22]
-highway=track [0x0a road_class=0 road_speed=1 resolution 22]
-highway=unsurfaced [0x0a road_class=0 road_speed=1 resolution 22]
-highway=road {add mkgmap:dead-end-check=false} [0x06 road_class=0 road_speed=1 resolution 22]
+highway=path [0x16 resolution 22]
+highway=track [0x0a resolution 22]
+highway=unsurfaced [0x0a resolution 22]
+highway=road {add mkgmap:dead-end-check=false} [0x06 resolution 22]
 
 # handle some rarer bits of road. Do just in case joining paths or bits of one-way roads
 highway=turning_loop | highway=turning_circle | highway=layby | highway=escape | highway=emergency_bay
-    [0x07 road_class=0 road_speed=0 resolution 22]
+    [0x07 resolution 22]
 
 # These are too specialized to have routing, so shouldn't drop into the mop-up, but, maybe needing TYP, can be shown on the map
 highway=raceway | highway=gallop {add name='${highway}'} [0x30 resolution 22]
@@ -160,12 +160,12 @@ highway=raceway | highway=gallop {add name='${highway}'} [0x30 resolution 22]
 # Mop up any unrecognised highway types
 #highway=* & tmp:stopMopUp!=yes {echotags 'mop-up highway'}  # mostly actual road names
 # It is considered best not to process unrecognised highway types
-#highway=* & area!=yes & tmp:stopMopUp!=yes [0x07 road_class=0 road_speed=0 resolution 22]
+#highway=* & area!=yes & tmp:stopMopUp!=yes [0x07 resolution 22]
 
 natural=coastline [0x15 resolution 12]
 power=line [0x29 resolution 21]
 
-railway=platform [0x16 road_class=0 road_speed=0 resolution 22]
+railway=platform [0x16 resolution 22]
 # Railway lines, note that many devices display type 0x14 only at resolution 24
 (railway=rail | railway=tram | railway=disused | railway=subway | railway=narrow_gauge | railway=light_rail | railway=preserved) & !(tunnel=yes)
     [0x14 resolution 22]
@@ -176,18 +176,18 @@ railway=platform [0x16 road_class=0 road_speed=0 resolution 22]
 # The following boundary styles are after the highway rules because ways
 # are frequently tagged with both and we want the highway to take priority.
 #boundary=administrative {name '${mkgmap:boundary_name}'}
-boundary=administrative & admin_level<3 [0x1e resolution 12]
+#boundary=administrative & admin_level<3 [0x1e resolution 12]
 #boundary=administrative & admin_level<5 [0x1d resolution 19]
 #boundary=administrative & admin_level<7 [0x1c resolution 21]
 #boundary=administrative & admin_level<9 [0x1c resolution 22]
 #boundary=administrative [0x1c resolution 22]
-boundary=national [0x1e resolution 17]
-boundary=political [0x1c resolution 19]
+#boundary=national [0x1e resolution 17]
+#boundary=political [0x1c resolution 19]
 
 barrier=wall | barrier=fence | barrier=hedge | barrier=ditch {add name='${barrier|subst:"_=> "}'} [0x17 resolution 22]
 
-route=ferry & (motorcar=no | motor_vehicle=no) [0x1b road_class=0 road_speed=0 resolution 22]
-route=ferry [0x1a road_class=3 road_speed=0 resolution 19]
+route=ferry & (motorcar=no | motor_vehicle=no) [0x1b resolution 22]
+route=ferry [0x1a resolution 19]
 
 (waterway=river | waterway=canal) & intermittent=yes [0x26 resolution 20]
 (waterway=stream | waterway=drain) & intermittent=yes [0x26 resolution 22]
@@ -201,20 +201,20 @@ waterway=stream | waterway=drain [0x18 resolution 22]
 waterway=* & waterway!=no & (area=no | (is_closed()=false & mkgmap:mp_created!=true))
     {add name='${waterway|subst:"_=> "}'} [0x26 resolution 22]
 
-include 'inc/contour_lines';
+#include 'inc/contour_lines';
 
 <finalize>
 # The finalizer section is executed for each element when a rule with an element type matches
 
 # Display highway shield for mayor roads if they have a ref and make them searchable by their name
-(highway=motorway | highway=trunk)     & ref=* {name '${ref|highway-symbol:hbox}'; addlabel '${name}'}
-highway=primary                        & ref=* {name '${ref|highway-symbol:box}' ; addlabel '${name}'}
-(highway=secondary | highway=tertiary) & ref=* {name '${ref|highway-symbol:oval}'; addlabel '${name}'}
+#(highway=motorway | highway=trunk)     & ref=* {name '${ref|highway-symbol:hbox}'; addlabel '${name}'}
+#highway=primary                        & ref=* {name '${ref|highway-symbol:box}' ; addlabel '${name}'}
+#(highway=secondary | highway=tertiary) & ref=* {name '${ref|highway-symbol:oval}'; addlabel '${name}'}
 
-name=* {name '${name}'}
-highway=* & ref=* & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary
-    {addlabel '${ref}'}
+#name=* {name '${name}'}
+#highway=* & ref=* & highway!=motorway & highway!=trunk & highway!=primary & highway!=secondary & highway!=tertiary
+#    {addlabel '${ref}'}
 
-highway=* & int_ref=* {addlabel '${int_ref}'}
-highway=* & nat_ref=* {addlabel '${nat_ref}'}
-highway=* & reg_ref=* {addlabel '${reg_ref}'}
+#highway=* & int_ref=* {addlabel '${int_ref}'}
+#highway=* & nat_ref=* {addlabel '${nat_ref}'}
+#highway=* & reg_ref=* {addlabel '${reg_ref}'}

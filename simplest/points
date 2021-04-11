@@ -1,31 +1,31 @@
 
 
-place=city & population > 999999 & name=* [0x0100 resolution 12]
-place=city & population > 799999 & name=* [0x0200 resolution 14]
-place=city & population > 399999 & name=* [0x0300 resolution 15]
-place=city & population > 299999 & name=* [0x0400 resolution 16]
-place=city & population > 199999 & name=* [0x0500 resolution 16]
-place=city & population >  99999 & name=* [0x0600 resolution 17]
-place=city & population >  49999 & name=* [0x0700 resolution 17]
-place=city & population >   9999 & name=* [0x0800 resolution 18]
+#place=city & population > 999999 & name=* [0x0100 resolution 12]
+#place=city & population > 799999 & name=* [0x0200 resolution 14]
+#place=city & population > 399999 & name=* [0x0300 resolution 15]
+#place=city & population > 299999 & name=* [0x0400 resolution 16]
+#place=city & population > 199999 & name=* [0x0500 resolution 16]
+#place=city & population >  99999 & name=* [0x0600 resolution 17]
+#place=city & population >  49999 & name=* [0x0700 resolution 17]
+#place=city & population >   9999 & name=* [0x0800 resolution 18]
 
-place=city & population >      0 & name=* [0x0800 resolution 18]
-place=city                       & name=* [0x0700 resolution 18]
+#place=city & population >      0 & name=* [0x0800 resolution 18]
+#place=city                       & name=* [0x0700 resolution 18]
 
-place=town & population >  69999 & name=* [0x0600 resolution 17]
-place=town & population >  19999 & name=* [0x0700 resolution 18]
-place=town & population >   9999 & name=* [0x0800 resolution 19]
-place=town & population >   4999 & name=* [0x0900 resolution 19]
-place=town & population >    999 & name=* [0x0a00 resolution 19]
-place=town & population >      0 & name=* [0x0b00 resolution 20]
-place=town                       & name=* [0x0800 resolution 19]
+#place=town & population >  69999 & name=* [0x0600 resolution 17]
+#place=town & population >  19999 & name=* [0x0700 resolution 18]
+#place=town & population >   9999 & name=* [0x0800 resolution 19]
+#place=town & population >   4999 & name=* [0x0900 resolution 19]
+#place=town & population >    999 & name=* [0x0a00 resolution 19]
+#place=town & population >      0 & name=* [0x0b00 resolution 20]
+#place=town                       & name=* [0x0800 resolution 19]
 
-place=village                    & name=* [0x0900 resolution 22]
-place=suburb                     & name=* [0x0a00 resolution 22]
-place=hamlet                     & name=* [0x0b00 resolution 22]
+#place=village                    & name=* [0x0900 resolution 22]
+#place=suburb                     & name=* [0x0a00 resolution 22]
+#place=hamlet                     & name=* [0x0b00 resolution 22]
 
-place=island & name=* [0x650c resolution 20]
-place=islet  & name=* [0x650c resolution 22]
+#place=island & name=* [0x650c resolution 20]
+#place=islet  & name=* [0x650c resolution 22]
 
 #aeroway=airport [0x5900 resolution 22]
 #aeroway=airport [0x2f04 resolution 22]
@@ -38,7 +38,7 @@ place=islet  & name=* [0x650c resolution 22]
 #amenity=border_control | barrier=border_control [0x3006 resolution 20]
 #amenity=bus_station [0x2f08 resolution 22]
 
-amenity=drinking_water [0x5000 resolution 22 default_name 'Water']
+#amenity=drinking_water [0x5000 resolution 22 default_name 'Water']
 
 #amenity=emergency_phone [0x2f12 resolution 22 default_name 'Emergency Phone']
 #amenity=ferry_terminal [0x2f08 resolution 22]
@@ -67,7 +67,7 @@ amenity=drinking_water [0x5000 resolution 22 default_name 'Water']
 
 #tourism=bed_and_breakfast [0x2b02 resolution 24]
 # NB: different devices use different codes for camp/caravan_site, have both!
-tourism=camp_site [0x2b03 resolution 22] [0x2b05 resolution 20]
+#tourism=camp_site [0x2b03 resolution 22] [0x2b05 resolution 20]
 #tourism=caravan_site [0x2b03 resolution 24] [0x2b05 resolution 24]
 #tourism=chalet [0x2b02 resolution 24]
 #tourism=guest_house [0x2b02 resolution 24]
@@ -77,7 +77,7 @@ tourism=camp_site [0x2b03 resolution 22] [0x2b05 resolution 20]
 #tourism=information [0x4c00 resolution 24]
 # tourism=lean_to replaces some uses of amenity=shelter
 #tourism=lean_to [0x2b05 resolution 24 default_name 'lean-to']
-tourism=wilderness_hut [0x2b07 resolution 22 default_name 'wilderness hut']
+#tourism=wilderness_hut [0x2b07 resolution 22 default_name 'wilderness hut']
 
 #tourism=viewpoint {name '${name} - ${description}' | '${name}'} [0x2c04 resolution 24]
 
@@ -85,15 +85,15 @@ tourism=wilderness_hut [0x2b07 resolution 22 default_name 'wilderness hut']
 
 
 
-natural=beach [0x6604 resolution 22]
-natural=glacier [0x650a resolution 22]
-natural=spring [0x6511 resolution 22]
-natural=stream [0x6512 resolution 22]
-natural=water & (water=canal | water=lock) & name=* [0x6505 resolution 22]
-(water=lake | water=pond) & name=* [0x650d resolution 22]
-natural=water & name=* [0x6603 resolution 22]
-natural=waterfall | waterway=waterfall [0x6508 resolution 22]
-natural=wetland & name=* [0x6513 resolution 22]
+#natural=beach [0x6604 resolution 22]
+#natural=glacier [0x650a resolution 22]
+#natural=spring [0x6511 resolution 22]
+#natural=stream [0x6512 resolution 22]
+#natural=water & (water=canal | water=lock) & name=* [0x6505 resolution 22]
+#(water=lake | water=pond) & name=* [0x650d resolution 22]
+#natural=water & name=* [0x6603 resolution 22]
+#natural=waterfall | waterway=waterfall [0x6508 resolution 22]
+#natural=wetland & name=* [0x6513 resolution 22]
 
 
 <finalize>
